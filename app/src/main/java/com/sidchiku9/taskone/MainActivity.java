@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             twoU = "https://i.pinimg.com/originals/a4/89/b8/a489b87aeed18a1dd8d742465aaf2326.jpg",
             threeU = "https://www.ecopetit.cat/wpic/mpic/45-454542_zoro-one-piece-art.jpg",
             fourU = "https://www.writeups.org/wp-content/uploads/Ichigo-Kurosaki-Bleach-Shonen-Jump-c.jpg";
-    Animation in = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-    Animation out = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +46,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         next.setOnClickListener(this);
         prev.setOnClickListener(this);
 
-        vf.setOutAnimation(out);
+        Animation in = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        Animation out = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right);
         vf.setInAnimation(in);
+        vf.setOutAnimation(out);
+        vf.setFlipInterval(3000);
     }
 
     @Override
