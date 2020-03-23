@@ -1,0 +1,2 @@
+# TaskOneADG
+Basic image switcher.
